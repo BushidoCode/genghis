@@ -1,0 +1,88 @@
+@import "bootstrap";
+$main-grey:#34495E;
+$light-grey:#F2F1EF;
+body{
+  font-family:OpenSansRegular !important;
+}
+header{
+  background:white;
+  position:fixed;
+  width:100%;
+  z-index:10000;
+  #logo{
+    background:white;
+    width:100%;
+    padding:2%;
+    //height:10%;
+  }
+  nav#main{
+    @extend .navbar;
+    @extend .navbar-default;
+    background:$main-grey !important;
+    height:auto !important;
+    padding:0.25% 15%;
+    margin-bottom:0 !important;
+    ul{
+      @extend .nav;
+      @extend .navbar-nav;
+      margin-bottom:0 !important;
+      li{
+        a{
+          color:#ffffff !important;
+        }
+
+      }
+      li.active{
+        a{
+          background:$light-grey !important;
+          color:black !important;
+        }
+      }
+      li:hover{
+        background:$light-grey !important;
+        color:black !important;
+      }
+    }
+  }
+
+}
+
+/* Content */
+#content{
+  width:100%;
+  padding:5% 15%;
+
+  /* Carousel */
+  #carousel-container{
+    width:100%;
+    /* height:40% !important; */
+  }
+}
+/* Content Class */
+.content{
+  h1{
+    color:$main-grey;
+  }
+}
+/* Full Size */
+.content.full{
+  @extend .col-md-12;
+}
+/* Small Size*/
+.content.small{
+  @extend .col-md-4;
+  h1{
+    font-size:30px;
+  }
+}
+
+#side-content{
+  @extend .col-md-8;
+}
+
+/* Table */
+table{
+  @extend .table;
+  @extend .table-responsive;
+  @extend .table-hover;
+}
